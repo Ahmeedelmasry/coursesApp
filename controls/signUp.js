@@ -40,7 +40,7 @@ const methodSetCookie = (req, res) => {
   res.cookie("jwt", token, {
     maxAge: maxAge * 1000,
     httpOnly: false,
-    sameSite: "none",
+    sameSite: "https://ahmedelmasry1994.web.app",
     secure: true,
   });
   res.status(201).json({ message: `Welcome back ${req.params.userName}` });
@@ -67,7 +67,7 @@ const postSignup = async (req, res) => {
     res.cookie("coursesApp", JSON.stringify(cookieData), {
       maxAge: maxAge * 1000,
       httpOnly: false,
-      sameSite: "none",
+      sameSite: "https://ahmedelmasry1994.web.app",
       secure: true,
     });
     res.json(newUser);

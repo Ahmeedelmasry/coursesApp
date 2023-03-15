@@ -53,7 +53,7 @@ const doLogin = async (req, res) => {
           res.cookie("coursesApp", JSON.stringify(cookieData), {
             maxAge: maxAge * 1000,
             httpOnly: false,
-            sameSite: "none",
+            sameSite: "https://ahmedelmasry1994.web.app",
             secure: true,
           });
           res.json("Login successfuly");
@@ -126,7 +126,8 @@ const updateWallet = async (req, res) => {
 const logOut = (req, res) => {
   res.cookie("coursesApp", "", {
     maxAge: 1,
-    sameSite: "none",
+    sameSite: "https://ahmedelmasry1994.web.app",
+    // sameSite: "none",
     httpOnly: false,
     secure: true,
   });
