@@ -41,7 +41,7 @@ const methodSetCookie = (req, res) => {
     maxAge: maxAge * 1000,
     httpOnly: false,
     sameSite: "https://ahmedelmasry1994.web.app",
-    secure: true,
+    secure: false,
   });
   res.status(201).json({ message: `Welcome back ${req.params.userName}` });
 };
@@ -68,7 +68,7 @@ const postSignup = async (req, res) => {
       maxAge: maxAge * 1000,
       httpOnly: false,
       sameSite: "https://ahmedelmasry1994.web.app",
-      secure: true,
+      secure: false,
     });
     res.json(newUser);
   } catch (error) {

@@ -54,7 +54,7 @@ const doLogin = async (req, res) => {
             maxAge: maxAge * 1000,
             httpOnly: false,
             sameSite: "https://ahmedelmasry1994.web.app",
-            secure: true,
+            secure: false,
           });
           res.json("Login successfuly");
         } else {
@@ -129,7 +129,7 @@ const logOut = (req, res) => {
     sameSite: "https://ahmedelmasry1994.web.app",
     // sameSite: "none",
     httpOnly: false,
-    secure: true,
+    secure: false,
   });
   res.json("Signed out");
 };
