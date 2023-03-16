@@ -57,7 +57,7 @@ const postSignup = async (req, res) => {
       maxAge: maxAge * 1000,
       httpOnly: false,
       sameSite: "none",
-      secure: false,
+      secure: true,
     });
     res.json(newUser);
   } catch (error) {
