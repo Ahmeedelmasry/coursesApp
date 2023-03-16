@@ -21,7 +21,7 @@ const lectureStream = require("./routes/lectureStream");
 //Handle Cors and Middleware
 app.use((req, res, next) => {
   res
-    .header("Access-Control-Allow-Origin", "https://ahmedelmasry1994.web.app")
+    .header("Access-Control-Allow-Origin", "https://mycoursesapp-427fa.web.app")
     .header("Access-Control-Allow-Methods", "GET, POST, HEAD, PUT, DELETE")
     .header(
       "Access-Control-Allow-Headers",
@@ -71,7 +71,7 @@ const { Server } = require("socket.io");
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://ahmedelmasry1994.web.app",
+    origin: "https://mycoursesapp-427fa.web.app",
     methods: ["GET", "POST", "HEAD", "PUT", "DELETE"],
   },
 });
