@@ -56,6 +56,7 @@ const doLogin = async (req, res) => {
             sameSite: "https://ahmedelmasry1994.web.app",
             secure: false,
           });
+          console.log("Login Success");
           res.json("Login successfuly");
         } else {
           res.status(404).json({ errors: { user: "incorrect password" } });

@@ -35,17 +35,6 @@ const generToken = (id) => {
   });
 };
 
-const methodSetCookie = (req, res) => {
-  const token = generToken(req.params.id);
-  res.cookie("jwt", token, {
-    maxAge: maxAge * 1000,
-    httpOnly: false,
-    sameSite: "https://ahmedelmasry1994.web.app",
-    secure: false,
-  });
-  res.status(201).json({ message: `Welcome back ${req.params.userName}` });
-};
-
 const postSignup = async (req, res) => {
   try {
     let newUser = await SignUp.create({
@@ -81,5 +70,4 @@ const postSignup = async (req, res) => {
 
 module.exports = {
   postSignup,
-  methodSetCookie,
 };
