@@ -72,7 +72,7 @@ const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
     origin: "https://ahmedelmasry1994.web.app",
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "HEAD", "PUT", "DELETE"],
   },
 });
 

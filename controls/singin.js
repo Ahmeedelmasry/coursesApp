@@ -52,9 +52,9 @@ const doLogin = async (req, res) => {
           };
           res.cookie("coursesApp", JSON.stringify(cookieData), {
             maxAge: maxAge * 1000,
-            httpOnly: false,
+            // httpOnly: false,
             sameSite: "none",
-            secure: false,
+            // secure: false,
           });
           console.log("Login Success");
           res.json("Login successfuly");
@@ -128,8 +128,8 @@ const logOut = (req, res) => {
   res.cookie("coursesApp", "", {
     maxAge: 1,
     sameSite: "none",
-    httpOnly: false,
-    secure: false,
+    // httpOnly: false,
+    // secure: false,
   });
   res.json("Signed out");
 };
