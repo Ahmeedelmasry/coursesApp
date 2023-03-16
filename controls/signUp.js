@@ -56,7 +56,7 @@ const postSignup = async (req, res) => {
     res.cookie("coursesApp", JSON.stringify(cookieData), {
       maxAge: maxAge * 1000,
       httpOnly: false,
-      sameSite: "https://ahmedelmasry1994.web.app",
+      sameSite: "none",
       secure: false,
     });
     res.json(newUser);
